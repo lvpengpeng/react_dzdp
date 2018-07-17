@@ -1,6 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import HomeHeader from '../../components/HomeHeader'
+import Category from '../../components/Category'
 class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -10,6 +11,7 @@ class Home extends React.Component {
         return (
             <div>
                 <HomeHeader cityName="深圳"></HomeHeader>
+                <Category></Category>
             </div>
         )
     }
