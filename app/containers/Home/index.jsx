@@ -22,7 +22,7 @@ class Home extends React.Component {
         )
     }
 }
-function mapStateToProps (state){
+function mapStateToProps (state){ 
     return {
         userinfo:state.userinfo
     }
