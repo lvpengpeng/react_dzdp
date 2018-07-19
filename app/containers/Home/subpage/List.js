@@ -1,6 +1,7 @@
 import React from 'react'
 import { getListData } from '../../../fetch/home/home.js'
 import './style.less'
+import ListComponents  from '../../../components/List'
 class List extends React.Component{
     constructor(props,context){
         super(props,context)
@@ -15,10 +16,11 @@ class List extends React.Component{
             <div>
                 <h2 className="love">猜你喜欢</h2>
                 {/* {this.props.cityName} */}
-                <div>
+                {/* <div>
                     {this.state.hasMore.toString()}
                     {this.state.data.length}
-                </div>
+                </div> */}
+                {this.state.data.length?<ListComponents data={this.state.data}/>:"加载中。。。。"}          
             </div>
             
         )
