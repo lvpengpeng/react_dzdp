@@ -14,7 +14,7 @@ class List extends React.Component{
             hasMore:false,
 
             // 记录当前状态，是“加载中...”（此时点击失效）还是“点击加载更多”
-            isloadingMore:false,
+            isloadingMore:true,
 
             // 记录下一页的页码
             page:1
@@ -39,6 +39,7 @@ class List extends React.Component{
         )
     }
     componentDidMount() {
+
         // 获取首页数据
         this.loadFirstPageData()
     }
@@ -52,12 +53,14 @@ class List extends React.Component{
     loadMoreData(){
         // 记录状态
         this.setState({
-            isloadingMore:true
+            page: this.state.page + 1,
+            isloadingMore:false
         })
         const cityName = this.props.cityName;
         const page = this.state.page;
         const result = getListData(cityName, page)
         this.resultHandle(result)
+        console.log(this.state.page)
     }
     // 处理数据
     resultHandle(result) {
