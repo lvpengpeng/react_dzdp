@@ -2,6 +2,8 @@ import React from 'react'
 import './style.less'
 import { connect } from 'react-redux'
 import { Link , hashHistory } from 'react-router'
+
+import SearchInput from '../SearchInput'
 class HomeHeader extends React.Component{
     constructor(props,context){
         super(props,context)
@@ -26,12 +28,7 @@ class HomeHeader extends React.Component{
                     <div className="search-container">
                         <i className="icon-search"></i>
                         &nbsp;
-                        <input 
-                            type="text" 
-                            placeholder="请输入关键字" 
-                            onChange={this.ChangeHandle.bind(this)}
-                            onKeyUp={this.KeyUpHandle.bind(this)}
-                            value={this.state.kwd}/>
+                        <SearchInput placeholder="请输入关键字"/>
                     </div>
                 </div>
             </div>
