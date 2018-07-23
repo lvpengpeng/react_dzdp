@@ -28,23 +28,15 @@ class HomeHeader extends React.Component{
                     <div className="search-container">
                         <i className="icon-search"></i>
                         &nbsp;
-                        <SearchInput placeholder="请输入关键字"/>
+                        <SearchInput placeholder="请输入关键字" value="" enterHandle={this.enterHandle.bind(this)}/>
                     </div>
                 </div>
             </div>
         )
     }
-    ChangeHandle(e) {
-        var val = e.target.value
-        this.setState({
-            kwd: val
-        })
-    }
-    KeyUpHandle(e) {
-        if (e.keyCode !== 13) {
-            return
-        }
-        hashHistory.push('/search/all/' + encodeURIComponent(this.state.kwd))
+
+    enterHandle(vaule) {
+        hashHistory.push('/search/all/' + encodeURIComponent(vaule))
     }
 }
 
