@@ -33,7 +33,7 @@ class City extends React.Component {
         }
         // 修改return
         const userinfo = this.props.userinfo;
-        userinfo.cityName = newCity;
+        userinfo.cityName = newCity; 
         this.props.userInfoActions.login(userinfo)
 
         // 修改 cookie
