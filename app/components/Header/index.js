@@ -7,11 +7,11 @@ class Header extends React.Component{
     }
     render(){
         return (
-            <div>
-                <span onClick={this.clickHandle.bind(this)}>返回</span>
-                <div>
-                    {this.props.data}
-                </div>
+            <div id="common-header">
+                <span className="back-icon" onClick={this.clickHandle.bind(this)}>
+                    <i className="icon-chevron-left">＜</i>
+                </span>
+                <h1>{this.props.data}</h1>
             </div>
         )
     }
