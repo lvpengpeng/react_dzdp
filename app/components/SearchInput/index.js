@@ -16,6 +16,7 @@ class SearchInput extends React.Component{
             value={this.state.value}
             onChange = {this.changHandle.bind(this)}
             onKeyUp = {this.keyUpHandle.bind(this)}
+            placeholder="请输入关键字"
             />
         )
     }
@@ -31,7 +32,7 @@ class SearchInput extends React.Component{
     }
     keyUpHandle(e){
         if(e.keyCode==13){
-            console.log(this.state.value)
+            // console.log(this.state.value)
             this.props.enterHandle(this.state.value)
         }
     }
