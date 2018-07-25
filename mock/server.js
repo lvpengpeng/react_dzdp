@@ -65,6 +65,9 @@ router.get('/api/search/:page/:city/:category', function *(next) {
     this.body = searchListData
 })
 
+
+
+
 // 开始服务并生成路由
 app.use(router.routes())
    .use(router.allowedMethods());
