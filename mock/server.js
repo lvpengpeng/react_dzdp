@@ -66,7 +66,18 @@ router.get('/api/search/:page/:city/:category', function *(next) {
 })
 
 
+// 详情页 - 商户信息
+const detailInfo = require('./detail/info.js')
+router.get('/api/detail/info/:id', function *(next) {
+    console.log('详情页 - 商户信息')
 
+    const params = this.params
+    const id = params.id
+
+    console.log('商户id: ' + id)
+
+    this.body = detailInfo
+})
 
 // 开始服务并生成路由
 app.use(router.routes())
