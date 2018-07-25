@@ -94,6 +94,12 @@ class SearchList extends React.Component {
         })
     }
     // 处理重新搜索
+
+        // 这里需要理解componentDidMount和componentDidUpdate两个生命周期的不同。
+
+        // 页面初次渲染，会走componentDidMount
+        // 页面再次渲染，就不会走componentDidMount，而只走componentDidUpdate
+
     componentDidUpdate(prevProps, prevState) {
         const keyword = this.props.keyword
         const category = this.props.category
