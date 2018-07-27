@@ -29,7 +29,7 @@ class App extends React.Component {
             cityName="北京"
         }
 
-        this.props.userinfoActions.login({
+        this.props.userinfoActions.update({
             cityName:cityName
         })
         this.setState({

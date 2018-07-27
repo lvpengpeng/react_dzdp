@@ -34,7 +34,7 @@ class City extends React.Component {
         // 修改return
         const userinfo = this.props.userinfo;
         userinfo.cityName = newCity; 
-        this.props.userInfoActions.login(userinfo)
+        this.props.userInfoActions.update(userinfo)
 
         // 修改 cookie
         localStore.setItem(CITYNAME, newCity)
