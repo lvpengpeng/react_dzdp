@@ -10,6 +10,8 @@ import { bindActionCreators } from 'redux'
 
 import * as userInfoActionsFromOtherFile from '../../actions/userinfo' 
 
+
+import LoginComponent from '../../components/Login'
 class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -25,7 +27,7 @@ class Login extends React.Component {
                 {
                     this.state.checking
                     ?<div>loding</div>
-                    : <div>这里显示登录组件</div>
+                    : <LoginComponent loginHandle={this.loginHandle.bind(this)}/>
                 }
             </div>
         )
@@ -60,7 +62,7 @@ class Login extends React.Component {
         const userinfo = this.props.userinfo;
         if(userinfo.username){
             console.log('已经登录')
-            this.goUesrPage()
+            this.goUserPage()
         }else{
             console.log('没登录');
             this.setState({
@@ -69,7 +71,7 @@ class Login extends React.Component {
         }
     }
 
-    goUesrPage(){
+    goUserPage(){
         hashHistory.push('/User')
     }
 }
