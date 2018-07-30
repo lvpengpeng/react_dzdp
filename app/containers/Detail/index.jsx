@@ -14,7 +14,7 @@ class Detail extends React.Component {
         
         return (
             <div>
-                <Header data="商家详情"/>
+                <Header data="商家详情" />
                 <Info id={id}/>
                 <Buy id={id}/>
                 <Comment id={id}/>

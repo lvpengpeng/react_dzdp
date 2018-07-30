@@ -27,7 +27,6 @@ class City extends React.Component {
         )
     }
     changeCity(newCity){
-        console.log(newCity,666)
         if(newCity == null){
             return
         }

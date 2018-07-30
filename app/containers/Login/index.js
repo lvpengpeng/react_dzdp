@@ -23,7 +23,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <Header title="登录"/>
+                <Header data="登录"/>
                 {
                     this.state.checking
                     ?<div>loding</div>
@@ -48,7 +48,7 @@ class Login extends React.Component {
         actions.update(userinfo)
 
         const params = this.props.params
-        const router = params.router
+        const router = params.router;
         if (router) {
             // 跳转到指定的页面
             hashHistory.push(router)

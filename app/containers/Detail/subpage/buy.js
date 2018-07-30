@@ -45,7 +45,7 @@ class Buy extends React.Component {
         const id = this.props.id
         const userinfo = this.props.userinfo
         if (!userinfo.username) {
-            // 跳转到登录页面的时候，要传入目标router，以便登录完了可以自己跳转回来
+            // 跳转到登录页面的时候，要传入目标router，以便登录完了可sss以自己跳转回来
             hashHistory.push('/Login/' + encodeURIComponent('/detail/' + id))
             return false
         }
@@ -83,7 +83,7 @@ class Buy extends React.Component {
         }
         // 修改状态
         this.setState({
-            isStore: !this.state.isStore
+            isStore: !this.state.isStore 
         })
     }
 }

@@ -15,7 +15,7 @@ class App extends React.Component {
         }
     }
     render() {
-        return (
+        return (  
             <div>
                 {this.state.initDone?this.props.children: <div>{this.state.city}</div>}
             </div>
