@@ -22,7 +22,7 @@ class OrederList extends React.Component {
                 <h2>您的订单</h2>
                 {
                     this.state.data.length
-                    ?<OrederListComponent data={this.state.data}/>:""
+                    ?<OrederListComponent data={this.state.data}  submitComment={this.submitComment.bind(this)}/>:""
                 }
             </div>
         )
